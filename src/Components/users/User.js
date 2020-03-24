@@ -77,7 +77,7 @@ const User = ({ user, loading, match, getUser }) => {
               {blog && (
                 <Fragment>
                   <strong>
-                    Website: <a href={`https://${blog}`}>{blog}</a>{" "}
+                    Website <a href={`https://${blog}`}>{blog}</a>{" "}
                   </strong>
                 </Fragment>
               )}
