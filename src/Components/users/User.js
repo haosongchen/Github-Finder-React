@@ -1,8 +1,11 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "../Layout/Spinner";
+import GithubContext from "../../context/githubContext";
 
-const User = ({ user, loading, match, getUser }) => {
+const User = ({ match }) => {
+  const githubContext = useContext(GithubContext);
+  const { getUser, loading, user } = githubContext;
   // second argument here is getting checked everytime screen is re-rendered. If it's different, use effect will
   // be called. Otherwise, no.
   useEffect(() => {
